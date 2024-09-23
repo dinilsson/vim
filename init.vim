@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+all plug#begin('~/.vim/plugged')
   Plug 'tomasiser/vim-code-dark'
   Plug 'pangloss/vim-javascript'
   Plug 'itchyny/lightline.vim'
@@ -57,6 +57,16 @@ let g:lightline = {
 nnoremap <leader>m :MaximizerToggle!<CR>
 
 " kassio/neoterm
+let g:neoterm_default_mod = 'vertical'
+let g:neoterm_size=60
+let g:neoterm_autoinsert=1
+nnoremap <c-q> :Ttoggle<CR>
+nnoremap <c-q> <Esc>:Ttoggle<CR>
+nnoremap <c-q> <c-\><c-n>:Ttoggle<CR>
+
+" sbdchd/neoformat
+nnoremap <leader>F :Neoformat prettier<CR>
+
 
 
 
