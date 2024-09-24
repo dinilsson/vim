@@ -1,4 +1,4 @@
-all plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/plugged')
   Plug 'tomasiser/vim-code-dark'
   Plug 'pangloss/vim-javascript'
   Plug 'itchyny/lightline.vim'
