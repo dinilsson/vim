@@ -8,6 +8,16 @@ call plug#begin('~/.vim/plugged')
   Plug 'kassio/neoterm'
   Plug 'tpope/vim-commentary'
   Plug 'sbdchd/neoformat'
+  Plug 'junegunn/fzf', {'dir':'~/.fzf','do':'./install --all'}
+  Plug 'junegunn/fzf.vim'
+  Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+"  Plug 'neovim/nvim-lspconfig'
+  Plug 'nvim-lua/completion-nvim'
+  Plug 'janko/vim-test'
+  Plug 'puremourning/vimspector'
+  Plug 'vimwiki/vimwiki'
+
 call plug#end()
 
 " default options
@@ -66,6 +76,13 @@ nnoremap <c-q> <c-\><c-n>:Ttoggle<CR>
 
 " sbdchd/neoformat
 nnoremap <leader>F :Neoformat prettier<CR>
+
+" junegunn/fzf.vim
+nnoremap <leader><space> :GFiles<CR>
+nnoremap <leader>ff :Rg<CR>
+inoremap <expr> <c-x><c-f> fzf#vim#complete#path(
+    \"find . -path '*/\.*' -prune -o -print \| sed '1d;s:^..::'",
+    \fzf#wrap({'dir': expand('%:p:h')})
 
 
 
