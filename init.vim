@@ -17,7 +17,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'janko/vim-test'
   Plug 'puremourning/vimspector'
   Plug 'vimwiki/vimwiki'
-  Plug 'ycm-core/YouCompleteMe',{'do':'./install.py'}
+  Plug 'ycm-core/YouCompleteMe',{'do':'./install.py --clang-completer --clangd-completer'}
 call plug#end()
 
 " default options
